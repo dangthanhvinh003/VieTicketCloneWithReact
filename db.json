@@ -1,0 +1,58 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "name": "Nguyen Van A",
+        "dateOfBirth": "1990-01-01",
+        "email": "nguyenvana@example.com",
+        "username": "nguyenvana",
+        "password": "password123",
+        "role": "a"
+      },
+      {
+        "id": 2,
+        "name": "Tran Thi B",
+        "dateOfBirth": "1992-02-02",
+        "email": "tranthib@example.com",
+        "username": "tranthib",
+        "password": "password123",
+        "role": "o"
+      },
+      {
+        "id": 3,
+        "name": "Le Van C",
+        "dateOfBirth": "1988-03-03",
+        "email": "levanc@example.com",
+        "username": "levanc",
+        "password": "password123",
+        "role": "u"
+      }
+    ],
+    "events": [
+      {
+        "id": 1,
+        "name": "Conference 2024",
+        "startDate": "2024-07-20",
+        "endDate": "2024-07-22",
+        "address": "123 Main St, Cityville",
+        "idUser": 2
+      },
+      {
+        "id": 2,
+        "name": "Workshop on JavaScript",
+        "startDate": "2024-08-15",
+        "endDate": "2024-08-16",
+        "address": "456 Elm St, Townsville",
+        "idUser": 2
+      },
+      {
+        "id": 3,
+        "name": "Tech Expo 2024",
+        "startDate": "2024-09-10",
+        "endDate": "2024-09-12",
+        "address": "789 Oak St, Villagetown",
+        "idUser": 2
+      }
+    ]
+  }
+  
