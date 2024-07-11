@@ -7,6 +7,8 @@ import Login from './components/login/login'
 import SignUp from './components/signup/signUp'
 import ChangeProfile from './components/changeProfile/changeProfile'
 import HomePage from './components/home-page/HomePage'
+import CreateEvent from './components/createEvent/createEvent'
+import './index.css'
 
 function App() {
   const [count, setCount] = useState(0)
