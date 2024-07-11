@@ -1,0 +1,77 @@
+.login-page {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+    background-image: url("https://i.ytimg.com/vi/KkLTZi05YJ4/maxresdefault.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .form-right {
+    background-color: #191825;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .form-right i {
+    font-size: 100px;
+  }
+  
+  .btn-primary {
+    background-color: #865DFF;
+    border-color: #865DFF;
+  }
+  
+  .btn-primary:hover {
+    background-color: #E384FF;
+    border-color: #E384FF;
+  }
+  
+  .btn-secondary {
+    background-color: #865DFF;
+    border-color: #865DFF;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #E384FF;
+    border-color: #E384FF;
+  }
+  
+  .text-primary {
+    color: #865DFF !important;
+  }
+  
+  .text-primary:hover {
+    color: #E384FF !important;
+  }
+  
+  .form-right {
+   
+    background-color: #191825;
+    
+  }
+  
+ 
+  .centered-image {
+    display: flex;
+    justify-content: center; /* Canh giữa theo chiều ngang */
+    align-items: center; /* Canh giữa theo chiều dọc */
+    height: 100%; /* Đảm bảo chiều cao của phần tử cha */
+  }
+  
+  .centered-image img {
+    max-width: 120%; /* Đảm bảo hình ảnh không vượt quá kích thước của phần tử cha */
+    height: auto; /* Đảm bảo tỷ lệ hình ảnh được duy trì */
+    display: block; /* Đảm bảo hình ảnh không bị đẩy lề */
+    margin-left: 7%;
+  }
+  
+  
+  
+  
