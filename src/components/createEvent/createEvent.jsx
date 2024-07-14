@@ -1,14 +1,17 @@
 import React, { useRef, useState } from 'react';
+import { addEvent } from '../../apis/event';
+import { useNavigate } from 'react-router-dom';
 
 function CreateEvent() {
+  const navigate = useNavigate();
   const [bannerPreview, setBannerPreview] = useState('');
   const [formData, setFormData] = useState({
     name: '',
     location: '',
-    start_date: '',
-    end_date: '',
+    startDate: '',
+    endDate: '',
     type: '',
-    ticket_sale_date: '',
+    ticketSaleDate: '',
     description: ''
   });
 
@@ -44,8 +47,14 @@ function CreateEvent() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Add logic to handle form submission
-    console.log(formData);
+    const add = async()=>{
+      const response = await addEvent(formData)
+      console.log(response);
+      alert('Event created successfully');
+      navigate('/');
+    };
+
+    add();
   };
   <input className='w-full bg-grey rounded h-11 px-3' type="file"  name="banner" accept="image/*" style={{display:"none"}} onChange={(e) => checkFileSize(e, setBannerPreview)} required />
 
@@ -104,14 +113,14 @@ function CreateEvent() {
               <input className='w-full bg-grey rounded h-11 px-3' type="text" id="location" name="location" value={formData.location} onChange={handleInputChange} required />
             </div>
             <div>
-              <label htmlFor="start_date" className='text-white'>Start Date:</label><span style={{ color: 'red' }}>*</span>
+              <label htmlFor="startDate" className='text-white'>Start Date:</label><span style={{ color: 'red' }}>*</span>
               <br/>
-              <input className='w-full bg-grey rounded h-11 px-3' type="datetime-local" id="start_date" name="start_date" value={formData.start_date} onChange={handleInputChange} required />
+              <input className='w-full bg-grey rounded h-11 px-3' type="datetime-local" id="startDate" name="startDate" value={formData.startDate} onChange={handleInputChange} required />
             </div>
             <div >
-              <label htmlFor="end_date" className='text-white'>End Date:</label><span style={{ color: 'red' }}>*</span>
+              <label htmlFor="endDate" className='text-white'>End Date:</label><span style={{ color: 'red' }}>*</span>
               <br/>
-              <input className='w-full bg-grey rounded h-11 px-3' type="datetime-local" id="end_date" name="end_date" value={formData.end_date} onChange={handleInputChange} required />
+              <input className='w-full bg-grey rounded h-11 px-3' type="datetime-local" id="endDate" name="endDate" value={formData.endDate} onChange={handleInputChange} required />
             </div>
           </div>
           <div>
@@ -128,9 +137,9 @@ function CreateEvent() {
             </select>
           </div>
           <div >
-            <label htmlFor="ticket_sale_date" className='text-white'>Ticket Sale Date:</label><span style={{ color: 'red' }}>*</span>
+            <label htmlFor="ticketSaleDate" className='text-white'>Ticket Sale Date:</label><span style={{ color: 'red' }}>*</span>
             <br/>
-            <input className='w-full bg-grey rounded h-11 px-3' type="datetime-local" id="ticket_sale_date" name="ticket_sale_date" value={formData.ticket_sale_date} onChange={handleInputChange} required />
+            <input className='w-full bg-grey rounded h-11 px-3' type="datetime-local" id="ticketSaleDate" name="ticketSaleDate" value={formData.ticketSaleDate} onChange={handleInputChange} required />
           </div>
           <div >
             <label htmlFor="editor" className='text-white'>Description:</label>

@@ -97,7 +97,10 @@
       "name": "Conference 2024",
       "startDate": "2024-07-20",
       "endDate": "2024-07-22",
-      "address": "123 Main St, Cityville",
+      "location": "123 Main St, Cityville",
+      "description": "The annual conference for developers, designers, and project managers.",
+      "type": "conference",
+      "ticketSaleDate": "2024-07-21",
       "idUser": 2
     },
     {
@@ -105,7 +108,10 @@
       "name": "Workshop on JavaScript",
       "startDate": "2024-08-15",
       "endDate": "2024-08-16",
-      "address": "456 Elm St, Townsville",
+      "location": "456 Elm St, Townsville",
+      "description": "The annual conference for developers, designers, and project managers.",
+      "type": "conference",
+      "ticketSaleDate": "2024-08-15",
       "idUser": 2
     },
     {
@@ -113,7 +119,10 @@
       "name": "Tech Expo 2024",
       "startDate": "2024-09-10",
       "endDate": "2024-09-12",
-      "address": "789 Oak St, Villagetown",
+      "location": "789 Oak St, Villagetown",
+      "description": "The annual conference for developers, designers, and project managers.",
+      "type": "conference",
+      "ticketSaleDate": "2024-09-11",
       "idUser": 2
     }
   ]

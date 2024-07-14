@@ -1,5 +1,6 @@
 import { useState } from 'react'
 
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import CreateEvent from './components/createEvent/createEvent'
@@ -7,7 +8,6 @@ import Login from './components/login/login'
 import SignUp from './components/signup/signUp'
 import ChangeProfile from './components/changeProfile/changeProfile'
 import HomePage from './components/home-page/HomePage'
-import CreateEvent from './components/createEvent/createEvent'
 import './index.css'
 
 function App() {

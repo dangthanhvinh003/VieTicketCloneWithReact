@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
 import HomeHeader from "./HomeHeader.jsx";
 import HomeCarousel from "./HomeCarousel.jsx";
 import EventsList from "./EventsList.jsx";
