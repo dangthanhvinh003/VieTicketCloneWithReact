@@ -16,7 +16,8 @@
         "email": "tranthib@example.com",
         "username": "tranthib",
         "password": "password123",
-        "role": "o"
+        "role": "o",
+        "image": "/public/images/o2.png"
       },
       {
         "id": 3,
@@ -35,7 +36,8 @@
         "startDate": "2024-07-20",
         "endDate": "2024-07-22",
         "address": "123 Main St, Cityville",
-        "idUser": 2
+        "idUser": 2,
+        "image": "/public/images/event1.png"
       },
       {
         "id": 2,
