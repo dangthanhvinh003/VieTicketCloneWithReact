@@ -21,7 +21,7 @@ function SignUp() {
 
     useEffect(() => {
         // Lấy danh sách người dùng từ db.json để xác định ID cuối cùng
-        axios.get('http://localhost:5000/users')
+        axios.get('http://localhost:8080/users')
             .then(response => {
                 const users = response.data;
                 if (users.length > 0) {
@@ -78,7 +78,7 @@ function SignUp() {
             const { confirmPassword, ...dataToSubmit } = formData;
             const newUserId = lastUserId + 1; // Tính toán ID mới
             try {
-                const response = await axios.post('http://localhost:5000/users', { ...dataToSubmit, id: newUserId.toString() }); // Chuyển ID mới thành chuỗi để thêm vào db.json
+                const response = await axios.post('http://localhost:8080/users', { ...dataToSubmit, id: newUserId.toString() }); // Chuyển ID mới thành chuỗi để thêm vào db.json
                 console.log('Form data:', response.data);
                 navigate('/login');
             } catch (error) {

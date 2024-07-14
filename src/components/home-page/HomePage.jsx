@@ -3,8 +3,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import HomeHeader from "./HomeHeader.jsx";
 import HomeCarousel from "./HomeCarousel.jsx";
-import EventsList from "./EventsList.jsx";
 import HomeFooter from './HomeFooter.jsx';
+import EventsList from './events-list/EventsList.jsx';
 
 const HomePage = () => {
     const columnSizes = 'col-sm-12 col-md-9 col-lg-7 col-xl-6 p-3';
@@ -27,7 +27,7 @@ const HomePage = () => {
     }, []);
 
     return (
-        <>
+        <div>
             <div ref={headerRef}>
                 <HomeHeader commonClassName={columnSizes}/>
             </div>
@@ -36,7 +36,7 @@ const HomePage = () => {
             <EventsList commonClassName={columnSizes}/>
 
             <HomeFooter commonClassName={columnSizes}/>
-        </>
+        </div>
     );
 };
 

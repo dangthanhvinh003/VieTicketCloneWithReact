@@ -20,7 +20,7 @@ function ChangeProfile() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/users/${id}`);
+                const response = await axios.get(`http://localhost:8080/users/${id}`);
                 setFormData(response.data);
                 setAvatarUrl(response.data.avatar); // Set initial avatar URL
             } catch (error) {
@@ -39,7 +39,7 @@ function ChangeProfile() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.put(`http://localhost:5000/users/${id}`, formData);
+            await axios.put(`http://localhost:8080/users/${id}`, formData);
             alert('Profile updated successfully.');
             navigate(`/users/${id}`);
         } catch (error) {
@@ -51,7 +51,7 @@ function ChangeProfile() {
     const handleAvatarSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.put(`http://localhost:5000/users/${id}`, { ...formData, avatar: avatarUrl });
+            await axios.put(`http://localhost:8080/users/${id}`, { ...formData, avatar: avatarUrl });
             alert('Avatar updated successfully.');
             setFormData({ ...formData, avatar: avatarUrl }); // Update local form data
             navigate(`/users/${id}`);

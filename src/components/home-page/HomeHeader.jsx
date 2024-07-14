@@ -8,8 +8,8 @@ const HomeHeader = ({commonClassName}) => {
 
     return (
         <Container className={commonClassName + ' home-header'}>
-            <header className={'d-flex justify-content-between align-items-center'}>
-                <h2>VieTicket</h2>
+            <header data-bs-theme="dark" className={'d-flex justify-content-between align-items-center'}>
+                <h2 style={{color: 'var(--bs-body-color)'}}>VieTicket</h2>
                 <div>
                     <Link to={'/login'} className={'btn btn-primary'}>
                         <LoginOutlined className={'me-2'}/>
