@@ -1,0 +1,35 @@
+.container {
+    background-color: #1b1b32;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .search-bar input {
+    margin-bottom: 20px;
+  }
+  
+  .card {
+    background-color: #292948;
+    border: none;
+  }
+  
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+  
+  .card-title,
+  .card-text {
+    color: white;
+  }
+  
+  .card img {
+    max-height: 200px;
+    object-fit: cover;
+  }
+
+
+  
