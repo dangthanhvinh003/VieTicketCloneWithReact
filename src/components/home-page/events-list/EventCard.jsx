@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const EventCard = ({ event }) => {
     return (
@@ -23,6 +24,9 @@ const EventCard = ({ event }) => {
                             {event.address}
                         </Card.Text>
                     </div>
+                    <Link to={`/viewDetail/${event.id}`} className={'btn btn-primary'}>
+                        View Detail
+                    </Link>
                 </Card.Body>
             </Card>
         </Col>

@@ -1,34 +1,48 @@
 import React, { useEffect, useState } from 'react';
-import styles from './viewDetail.module.css'; // Import correct CSS module
+import { useParams } from 'react-router-dom';
+import styles from './viewDetail.module.css'; 
 
 const ViewDetail = () => {
-  const [data, setData] = useState({ events: [], users: [] });
-  const [selectedEvent, setSelectedEvent] = useState({});
-  const [organizer, setOrganizer] = useState({});
+  const { eventId } = useParams();
+  const [selectedEvent, setSelectedEvent] = useState(null);
+  const [organizer, setOrganizer] = useState(null);
 
   useEffect(() => {
-    fetch('/db.json')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok ' + response.statusText);
+    const fetchEventAndOrganizer = async () => {
+      try {
+        const eventResponse = await fetch('http://localhost:8080/events');
+        if (!eventResponse.ok) {
+          throw new Error('Network response was not ok ' + eventResponse.statusText);
         }
-        return response.json();
-      })
-      .then(data => {
-        setData(data);
-        if (data.events.length > 0) {
-          const event = data.events[0];
-          const organizer = data.users.find(user => user.id === event.idUser);
+        const events = await eventResponse.json();
+
+        const event = events.find(event => event.id === eventId);
+        
+        if (event) {
+          const userResponse = await fetch('http://localhost:8080/users');
+          if (!userResponse.ok) {
+            throw new Error('Network response was not ok ' + userResponse.statusText);
+          }
+          const users = await userResponse.json();
+          const organizer = users.find(user => {
+            console.log(user.id, event.idUser)
+            return parseInt(user.id) === parseInt(event.idUser)
+          });
+          console.log(organizer)
+
           setSelectedEvent(event);
           setOrganizer(organizer);
         }
-      })
-      .catch(error => {
+      } catch (error) {
         console.error('There was a problem with the fetch operation:', error);
-      });
-  }, []);
+      }
+    };
 
-  if (!data || !selectedEvent || !organizer) {
+    fetchEventAndOrganizer();
+  }, [eventId]);
+  console.log(selectedEvent, organizer)
+
+  if (!selectedEvent || !organizer) {
     return <div>Loading...</div>;
   }
 
@@ -43,20 +57,19 @@ const ViewDetail = () => {
               <p>Location: {selectedEvent.address}</p>
               <button>Buy Ticket</button>
             </div>
-            <img src={selectedEvent.image} alt="Event" className={styles.eventImage} />
+            <img src={selectedEvent.img} alt="Event" className={styles.eventImage} />
           </div>
         </header>
         <main className={styles.main}>
             <section className={styles.eventDetails}>
                 <div className={styles.description}>
                 <h2>About Description</h2>
-                <p>Some description about the event...</p>
+                <p>{selectedEvent.description || 'Some description about the event...'}</p>
                 </div>
                 <aside className={styles.organizer}>
                 <div>
-                {/* <div className={styles.organizerDetails}> */}
-                    <div className={styles.organizerHeader}>
-                        <img src={organizer.image} alt="Organizer" className={styles.organizerImage} />
+                <div className={styles.organizerHeader}>
+                        <img src={organizer.avatar} alt="Organizer" className={styles.organizerImage} />
                         <h2>Organizer</h2>
                     </div>
                     <div>
@@ -69,8 +82,6 @@ const ViewDetail = () => {
                 </aside>
             </section>
         </main>
-
-
         <footer className={styles.footer}>
           <p>VieTicket</p>
           <p>Social Links...</p>

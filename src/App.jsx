@@ -22,9 +22,9 @@ function App() {
           <Route path="/createEvent" element={<CreateEvent />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
-          <Route path="/users/:id" element={<ChangeProfile />} />        
-          <Route path="/viewDetail" element={<ViewDetail/>} />        
+          <Route path="/users/:id" element={<ChangeProfile />} />         
           <Route path="/search" element ={<SearchEvent/>} />
+          <Route path="/viewDetail/:eventId" element={<ViewDetail/>} />
         </Routes>
       </Router>
     </>
