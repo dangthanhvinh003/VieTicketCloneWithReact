@@ -13,7 +13,6 @@ import ViewDetail from './components/viewDetail/viewDetail'
 
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
@@ -23,7 +22,8 @@ function App() {
           <Route path="/createEvent" element={<CreateEvent />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
-          <Route path="/users/:id" element={<ChangeProfile />} />        <Route path="/viewDetail" element={<ViewDetail/>} />
+          <Route path="/users/:id" element={<ChangeProfile />} />        
+          <Route path="/viewDetail" element={<ViewDetail/>} />
         </Routes>
       </Router>
     </>
