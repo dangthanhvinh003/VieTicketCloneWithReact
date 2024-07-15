@@ -9,6 +9,8 @@ import SignUp from './components/signup/signUp'
 import ChangeProfile from './components/changeProfile/changeProfile'
 import HomePage from './components/home-page/HomePage'
 import './index.css'
+import ViewDetail from './components/viewDetail/viewDetail'
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -21,7 +23,7 @@ function App() {
           <Route path="/createEvent" element={<CreateEvent />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
-          <Route path="/users/:id" element={<ChangeProfile />} />
+          <Route path="/users/:id" element={<ChangeProfile />} />        <Route path="/viewDetail" element={<ViewDetail/>} />
         </Routes>
       </Router>
     </>
