@@ -1,58 +1,132 @@
 {
-    "users": [
-      {
-        "id": 1,
-        "name": "Nguyen Van A",
-        "dateOfBirth": "1990-01-01",
-        "email": "nguyenvana@example.com",
-        "username": "nguyenvana",
-        "password": "password123",
-        "role": "a"
-      },
-      {
-        "id": 2,
-        "name": "Tran Thi B",
-        "dateOfBirth": "1992-02-02",
-        "email": "tranthib@example.com",
-        "username": "tranthib",
-        "password": "password123",
-        "role": "o"
-      },
-      {
-        "id": 3,
-        "name": "Le Van C",
-        "dateOfBirth": "1988-03-03",
-        "email": "levanc@example.com",
-        "username": "levanc",
-        "password": "password123",
-        "role": "u"
-      }
-    ],
-    "events": [
-      {
-        "id": 1,
-        "name": "Conference 2024",
-        "startDate": "2024-07-20",
-        "endDate": "2024-07-22",
-        "address": "123 Main St, Cityville",
-        "idUser": 2
-      },
-      {
-        "id": 2,
-        "name": "Workshop on JavaScript",
-        "startDate": "2024-08-15",
-        "endDate": "2024-08-16",
-        "address": "456 Elm St, Townsville",
-        "idUser": 2
-      },
-      {
-        "id": 3,
-        "name": "Tech Expo 2024",
-        "startDate": "2024-09-10",
-        "endDate": "2024-09-12",
-        "address": "789 Oak St, Villagetown",
-        "idUser": 2
-      }
-    ]
-  }
-  
+  "users": [
+    {
+      "id": "1",
+      "name": "Nguyen Van BẤCDSAD",
+      "dateOfBirth": "1990-01-01",
+      "email": "nguyenvana@example.com",
+      "username": "vinh",
+      "password": "vinh",
+      "role": "a",
+      "avatar": "https://scontent.fdad3-4.fna.fbcdn.net/v/t39.30808-6/312939056_2184362265077567_1751219165601149570_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=dMdvmAxg7hcQ7kNvgHgTKEb&_nc_ht=scontent.fdad3-4.fna&oh=00_AYDBrbIFQR0R2T0XjW0jz0R890_3CByFRgPxr5SyYM2XRQ&oe=669576F4"
+    },
+    {
+      "id": "2",
+      "name": "Nguyen Van A",
+      "dateOfBirth": "1990-01-01",
+      "email": "nguyenvana@example.com",
+      "username": "vinh",
+      "password": "vinh",
+      "role": "a",
+      "avatar": ""
+    },
+    {
+      "id": "3",
+      "name": "Nguyen Van A",
+      "dateOfBirth": "1990-01-01",
+      "email": "nguyenvana@example.com",
+      "username": "vinh",
+      "password": "vinh",
+      "role": "a",
+      "avatar": ""
+    },
+    {
+      "id": "4",
+      "name": "Nguyen Van A",
+      "dateOfBirth": "1990-01-01",
+      "email": "nguyenvana@example.com",
+      "username": "vinh",
+      "password": "vinh",
+      "role": "a",
+      "avatar": ""
+    },
+    {
+      "id": "5",
+      "name": "Nguyen Van A",
+      "dateOfBirth": "1990-01-01",
+      "email": "nguyenvana@example.com",
+      "username": "vinh",
+      "password": "vinh",
+      "role": "a",
+      "avatar": ""
+    },
+    {
+      "id": "6",
+      "name": "Nguyen Van A",
+      "dateOfBirth": "1990-01-01",
+      "email": "nguyenvana@example.com",
+      "username": "vinh",
+      "password": "vinh",
+      "role": "a",
+      "avatar": ""
+    },
+    {
+      "id": "7",
+      "name": "Nguyen Van A",
+      "dateOfBirth": "1990-01-01",
+      "email": "nguyenvana@example.com",
+      "username": "vinh",
+      "password": "vinh",
+      "role": "a",
+      "avatar": ""
+    },
+    {
+      "id": "8",
+      "name": "Hoàng",
+      "dateOfBirth": "2024-07-22",
+      "email": "hoang@gmail.com",
+      "username": "hoang",
+      "password": "Hoang123@",
+      "role": "o",
+      "avatar": ""
+    },
+    {
+      "id": "9",
+      "name": "Vinh",
+      "dateOfBirth": "2024-07-01",
+      "email": "vinh@gmail.com",
+      "username": "vinh",
+      "password": "Vinh123@",
+      "role": "o",
+      "avatar": "https://th.bing.com/th/id/R.da9a1590af3477b3a0d8ecae4af49d2e?rik=NXOsxq44POV%2bSg&riu=http%3a%2f%2falagna.com%2fwp-content%2fuploads%2f2012%2f11%2ffire-gif.gif&ehk=Ll7FI1LbmxAvCxP933J2wikBmd%2buBFd0jW88YsMXsxA%3d&risl=&pid=ImgRaw&r=0"
+    }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "name": "Conference 2024",
+      "startDate": "2024-07-20",
+      "endDate": "2024-07-22",
+      "location": "123 Main St, Cityville",
+      "description": "The annual conference for developers, designers, and project managers.",
+      "type": "conference",
+      "ticketSaleDate": "2024-07-21",
+      "idUser": 2,
+      "img": "https://inspect.vieticket.io.vn/screenshots/wide/1.webp"
+    },
+    {
+      "id": 2,
+      "name": "Workshop on JavaScript",
+      "startDate": "2024-08-15",
+      "endDate": "2024-08-16",
+      "location": "456 Elm St, Townsville",
+      "description": "The annual conference for developers, designers, and project managers.",
+      "type": "conference",
+      "ticketSaleDate": "2024-08-15",
+      "idUser": 2,
+      "img": "https://inspect.vieticket.io.vn/screenshots/wide/2.webp"
+    },
+    {
+      "id": 3,
+      "name": "Tech Expo 2024",
+      "startDate": "2024-09-10",
+      "endDate": "2024-09-12",
+      "location": "789 Oak St, Villagetown",
+      "description": "The annual conference for developers, designers, and project managers.",
+      "type": "conference",
+      "ticketSaleDate": "2024-09-11",
+      "idUser": 2,
+      "img": "https://inspect.vieticket.io.vn/screenshots/wide/3.webp"
+    }
+  ]
+}

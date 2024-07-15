@@ -1,11 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [],
+  content: ["./src/**/*.{html,js,jsx}"],
   theme: {
     extend: {},
-  }git remote add origin https://github.com/dangthanhvinh003/VieTicketCloneWithReact.git
-  git branch -M main
-  git push -u origin main,
+    colors: {
+      grey: "#D9D9D9",
+      black: "#000000",
+      white: "#FFFFFF",
+      purple: "#865DFF",
+    },
+  },
   plugins: [],
-}
-
+};
