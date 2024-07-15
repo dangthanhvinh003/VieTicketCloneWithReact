@@ -42,7 +42,7 @@ const SearchEvent = () => {
           <div className="col-md-6 mb-4" key={event.id}>
             <div className={`${styles.card} card`}>
               <img
-                src={event.image}
+                src={event.img}
                 className="card-img-top"
                 alt={event.name}
               />

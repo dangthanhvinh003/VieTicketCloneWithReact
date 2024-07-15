@@ -12,7 +12,6 @@ import HomePage from './components/home-page/HomePage'
 import './index.css'
 import ViewDetail from './components/viewDetail/viewDetail'
 
-
 function App() {
 
   return (

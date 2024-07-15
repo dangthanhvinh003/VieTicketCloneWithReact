@@ -93,7 +93,7 @@
   ],
   "events": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Conference 2024",
       "startDate": "2024-07-20",
       "endDate": "2024-07-22",
@@ -105,7 +105,7 @@
       "img": "https://inspect.vieticket.io.vn/screenshots/wide/1.webp"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Workshop on JavaScript",
       "startDate": "2024-08-15",
       "endDate": "2024-08-16",
@@ -117,7 +117,7 @@
       "img": "https://inspect.vieticket.io.vn/screenshots/wide/2.webp"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Tech Expo 2024",
       "startDate": "2024-09-10",
       "endDate": "2024-09-12",

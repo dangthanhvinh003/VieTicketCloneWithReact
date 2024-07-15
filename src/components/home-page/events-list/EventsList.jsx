@@ -20,8 +20,8 @@ const EventsList = () => {
     <Container data-bs-theme="dark">
       {events.length > 0 ? (
         <>
-          <h3 className='mt-4 text-center' style={{color: 'var(--bs-body-color)'}}>List of Events</h3>
-          <Row>
+          <h3 className='mt-4 mb-4 text-center fs-3' style={{color: 'var(--bs-body-color)'}}>List of Events</h3>
+          <Row className='g-4'>
             {events.map(event => (
               <EventCard key={event.id} event={event} />
             ))}
