@@ -24,7 +24,7 @@ const EventCard = ({ event }) => {
                             {event.address}
                         </Card.Text>
                     </div>
-                    <Link to={`/viewDetail/${event.id}`} className={'btn btn-primary'}>
+                    <Link to={`/viewDetail/${event.id}`} className={'btn btn-outline-primary mt-2'}>
                         View Detail
                     </Link>
                 </Card.Body>
