@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { fetchEvents } from './api';
 import { Container, Row } from 'react-bootstrap';
 import EventCard from './EventCard';
+
+import { fetchEvents } from '../../../apis/event';
 
 const EventsList = () => {
   const [events, setEvents] = useState([]);
