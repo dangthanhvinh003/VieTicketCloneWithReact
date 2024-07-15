@@ -4,35 +4,35 @@ import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import styles from './login.module.css'; // Import CSS module
+import { useAuth } from '../../context/auth';
 
 function Login() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
+    const { login } = useAuth();
     const navigate = useNavigate();
 
     const handleLogin = async (e) => {
         e.preventDefault();
-
         try {
             const response = await axios.get('http://localhost:8080/users');
             const users = response.data;
-
             const user = users.find(u => u.username === username && u.password === password);
-
+    
             if (user) {
-                if (user.role === 'a') {
-                    navigate('/');
-                } else if (user.role === 'o') {
-                    navigate('/');
-                } else if (user.role === 'u') {
-                    navigate('/');
-                }
+                console.log(user)
+                await login(user);
+
+                // Simplified navigation, as the destination is the same for all roles
+                navigate('/');
             } else {
                 setError('Invalid username or password');
             }
         } catch (error) {
-            setError('An error occurred during login');
+            // More specific error handling
+            console.error("Login error:", error);
+            setError('An error occurred during login. Please try again later.');
         }
     };
 

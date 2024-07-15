@@ -12,7 +12,8 @@ function CreateEvent() {
     endDate: '',
     type: '',
     ticketSaleDate: '',
-    description: ''
+    description: '',
+    img: "https://picsum.photos/200/200"
   });
 
   const fileInputRef = useRef(null)

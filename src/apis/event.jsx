@@ -8,6 +8,7 @@ export const addEvent = async (event) => {
       },
       body: JSON.stringify(event),
   });
+  return await response.json();
 }
 
 export const fetchEvents = async () => {
